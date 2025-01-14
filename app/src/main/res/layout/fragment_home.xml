@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:name="com.example.ecommercecase.ui.home.HomeFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+   <androidx.appcompat.widget.AppCompatEditText
+       android:id="@+id/appCompatEditText"
+       android:layout_width="match_parent"
+       android:layout_height="48dp"
+       android:layout_margin="16dp"
+       android:background="@drawable/rounded_corner_bg"
+       android:backgroundTint="@color/gray"
+       android:drawableStart="@drawable/ic_search"
+       android:paddingStart="4dp"
+       android:hint="@string/search"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="parent" />
+
+   <FrameLayout
+       android:id="@+id/flFilters"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_gravity="center"
+       android:layout_margin="16dp"
+       android:orientation="horizontal"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@id/appCompatEditText">
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:gravity="start"
+          android:text="@string/filters"
+          android:textColor="@color/black"
+          android:textSize="16sp"
+          android:textStyle="bold" />
+
+      <androidx.appcompat.widget.AppCompatButton
+          android:layout_width="120dp"
+          android:layout_height="48dp"
+          android:layout_gravity="end"
+          android:text="@string/select_filter" />
+   </FrameLayout>
+
+   <androidx.recyclerview.widget.RecyclerView
+       android:id="@+id/rvShoppingList"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginStart="16dp"
+       android:gravity="center"
+       android:nestedScrollingEnabled="false"
+       app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/flFilters"
+       app:spanCount="2"
+       tools:listitem="@layout/item_shopping_list"
+       />
+   <TextView
+       android:id="@+id/tvNoItem"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="@string/no_item_in_home"
+       android:textSize="16sp"
+       android:textStyle="bold"
+       android:layout_margin="16dp"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       android:visibility="gone"
+       />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

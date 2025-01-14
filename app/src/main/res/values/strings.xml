@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">eCommerceCase</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Cart</string>
+    <string name="title_notifications">Favorites</string>
+    <string name="add_to_chart">Add to Cart</string>
+    <string name="filters">Filters:</string>
+    <string name="select_filter">Select Filter</string>
+    <string name="search">Search</string>
+    <string name="price">Price:</string>
+    <string name="no_item_in_cart">No item in cart</string>
+    <string name="no_item_in_home">gösterilecek liste yok\n</string>
+</resources>
